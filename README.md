@@ -1,21 +1,21 @@
 # Contropensiero
 
-Un diario desktop privato per i pensieri che arrivano quando vogliono. Scegli Italiano o English all'avvio; il diario resta sul computer, senza account né cloud.
+A private desktop diary for thoughts that show up whenever they want. Choose Italian or English when you open the app. Your diary stays on your computer, with no account or cloud service.
 
-> È un vecchio progetto che ho ritrovato facendo pulizia. Non so neanche più bene come funzioni, ma resta mio. Probabilmente è anche un po' vibe-coded.
+> I came across this old project while cleaning up. I can't quite remember how everything works anymore, but it's still mine. Some parts may be a little vibe-coded.
 
-## Cosa fa
+## Features
 
-- Diario protetto da password e cifrato con AES-GCM; la password è derivata con scrypt.
-- Salvataggio automatico sul dispositivo e blocco dopo dieci minuti di inattività.
-- Raccolta con ricerca, calendario, etichette, preferiti e umore per pagina.
-- Copie di sicurezza cifrate, ripristino e cambio password.
-- Interfaccia desktop in italiano e inglese, con tema scuro caldo.
-- Scorciatoie: `Ctrl + N` nuova pagina, `Ctrl + F` cerca, `Ctrl + S` salva, `Ctrl + L` blocca, `Ctrl + W` chiude la pagina aperta.
+- Password-protected diary encrypted with AES-GCM; the encryption key is derived with scrypt.
+- Automatic local saves and a diary that locks after ten minutes of inactivity.
+- Searchable collection with a calendar, tags, favorites, and a mood for each entry.
+- Encrypted backups, restore, and password changes.
+- Warm, dark desktop interface in Italian and English.
+- Shortcuts: `Ctrl + N` new entry, `Ctrl + F` search, `Ctrl + S` save, `Ctrl + L` lock, `Ctrl + W` close the current entry.
 
-## Avvio
+## Getting started
 
-Serve Python 3.10 o successivo, Tkinter e pip.
+Requires Python 3.10 or newer, Tkinter, and pip.
 
 **Windows**
 
@@ -26,7 +26,7 @@ python -m pip install -r requirements.txt
 python app.py
 ```
 
-**macOS e Linux**
+**macOS and Linux**
 
 ```bash
 python3 -m venv .venv
@@ -35,18 +35,18 @@ python -m pip install -r requirements.txt
 python app.py
 ```
 
-Al primo avvio crea una password di almeno otto caratteri. La password non si può recuperare.
+On first launch, create a password with at least eight characters. The password cannot be recovered.
 
-## Dati e privacy
+## Data and privacy
 
-Le pagine sono salvate in un file cifrato nella cartella dati utente: `%APPDATA%\Contropensiero\diario.enc` su Windows, `~/Library/Application Support/Contropensiero/diario.enc` su macOS e `~/.local/share/contropensiero/diario.enc` su Linux. La preferenza della lingua è salvata a parte in `settings.json`; non contiene dati del diario.
+Diary entries are stored in an encrypted file in your user data folder: `%APPDATA%\Contropensiero\diario.enc` on Windows, `~/Library/Application Support/Contropensiero/diario.enc` on macOS, and `~/.local/share/contropensiero/diario.enc` on Linux. Your language preference is saved separately in `settings.json` and contains no diary data.
 
-Il file personale del diario non fa parte di questo repository. Il blocco protegge il file cifrato; non protegge copie non cifrate o una sessione già sbloccata da chi può usare il tuo account di sistema.
+Your personal diary file is not part of this repository. The lock protects the encrypted file; it does not protect unencrypted copies or an unlocked session from someone using your system account.
 
-## Tecnologie
+## Built with
 
-Python, Tkinter, `cryptography` e `hashlib.scrypt`. La workflow GitHub Actions prepara build desktop per Windows, macOS e Linux.
+Python, Tkinter, `cryptography`, and `hashlib.scrypt`. The GitHub Actions workflow builds desktop apps for Windows, macOS, and Linux.
 
 ## License
 
-MIT. Vedi [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).
