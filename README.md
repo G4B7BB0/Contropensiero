@@ -2,7 +2,7 @@
 
 A private desktop diary for thoughts that show up whenever they want. Choose Italian or English when you open the app. Your diary stays on your computer, with no account or cloud service.
 
-> I came across this old project while cleaning up. I can't quite remember how everything works anymore, but it's still mine. Some parts may be a little vibe-coded.
+> I came across this old project while cleaning up. I can't quite remember how everything works anymore, and some parts may be a little vibe-coded.
 
 ## Features
 
