@@ -1,6 +1,6 @@
 # Contropensiero
 
-A private, offline-first desktop diary for capturing thoughts as they come.
+A private desktop diary for capturing thoughts, tracking moods, and revisiting old entries.
 
 > I came across this old project while cleaning up. I can't quite remember how everything works anymore, and some parts may be a little vibe-coded.
 
