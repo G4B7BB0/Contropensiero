@@ -1,0 +1,28 @@
+name: Build desktop app
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt pyinstaller
+      - name: Build app
+        run: pyinstaller --noconfirm --windowed --name Contropensiero app.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Contropensiero-${{ runner.os }}
+          path: dist/Contropensiero*

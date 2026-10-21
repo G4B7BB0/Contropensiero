@@ -1,0 +1,11 @@
+[project]
+name = "contropensiero"
+version = "1.1.0"
+description = "Un diario desktop privato, in italiano e offline."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = ["cryptography>=44.0,<48.0"]
+
+[project.optional-dependencies]
+build = ["pyinstaller>=6.0"]
